@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>DevSysteme Browser</title>
+
+    <!-- App references -->
+    <link href="css/browser.css" rel="stylesheet" />
+    <script src="js/browser.js"></script>
+
+    <!-- UI component references -->
+    <script src="js/components/webview.js"></script>
+    <script src="js/components/title-bar.js"></script>
+    <script src="js/components/address-bar.js"></script>
+    <script src="js/components/navigation.js"></script>
+    <script src="js/components/favorites.js"></script>
+    <script src="js/components/settings.js"></script>
+    <script src="js/components/personalization.js"></script>
+</head>
+<body>
+    <div id="browser" class="perspective effect-moveleft">
+        <div class="container">
+            <div class="wrapper">
+                <div class="navbar">
+                    <button id="backButton" class="navButton backButton" title="Go back"></button>
+                    <button id="forwardButton" class="navButton forwardButton" title="Go forward"></button>
+                    <button id="stopButton" class="navButton stopButton" title="Stop loading"></button>
+                    <label class="icon" for="urlInput">
+                        <span class="ring"></span>
+                        <img id="favicon" src="" />
+                    </label>
+                    <div id="tweet" title="DevSysteme"></div>
+                    <div id="urlWrap">
+                        <input id="urlInput" type="text" class="win-textbox" />
+                        <span id="urlDisplay" class="win-textbox" />
+                    </div>
+                    <button id="favButton" class="navButton favButton" title="View favorites"></button>
+                    <button id="settingsButton" class="navButton settingsButton" title="View settings"></button>
+                </div>
+                <x-ms-webview id="WebView"></x-ms-webview>
+            </div>
+        </div>
+        <nav id="favMenu" class="outer-nav right vertical">
+            <div>
+                <h1>Favorites</h1>
+                <a id="addFavButton">Add favorite</a>
+                <hr />
+            </div>
+            <div id="favorites"></div>
+        </nav>
+        <nav id="settingsMenu" class="outer-nav right vertical">
+            <div>
+                <h1>Settings</h1>
+                <a id="goFullscreen"></a>
+                <hr />
+                <a id="clearCacheButton">Clear cache</a>
+                <a id="clearFavButton">Clear favorites</a>
+                
+                <!--Personalization Menu-->
+                <a id="personalization">Personalization </a>
+                    <a id="goback">Go Back</a>
+
+                    <a id="coloroptions">Color Options</a>
+                              <a id="gobackfromcolormenu">Go Back</a>
+                              <a id="navbarcolor">Navigation Bar Color</a>
+                                          <a id = "gobackfromnavbarcolor">Go Back</a>
+                                          <a id= "defaultnavbarcolor">Default Color</a>
+                                          <a id="navbartored">Red</a>
+                                          <a id="navbartoblue">Blue</a>
+                                          <a id="navbartogreen">Green</a>
+                                            
+
+                <a id="citation">Ensemble développons le future de la programation.</a>
+            </div>
+        </nav>
+    </div>
+    <div id="fullscreenMessage">You are now in full screen mode. <a id="hideFullscreen">Click here</a> or press F11 to exit.</div>
+</body>
+</html>
